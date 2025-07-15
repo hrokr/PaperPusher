@@ -1,0 +1,16 @@
+version: "3"
+services:
+  airflow:
+    image: apache/airflow:2.8.1-python3.9
+    container_name: document_airflow
+    restart: always
+    ports:
+      - "8080:8080"
+    environment:
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./scripts:/opt/airflow/scripts
+      - ./db:/opt/airflow/db
+      - ./data:/opt/airflow/data
+    command: webserver
