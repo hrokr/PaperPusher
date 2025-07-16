@@ -1,0 +1,6 @@
+ocrmypdf
+pdfminer.six
+spacy
+scikit-learn
+sqlite-utils
+
