@@ -1,7 +1,6 @@
-version: "3"
 services:
   airflow:
-    image: apache/airflow:3.0.2-python3.13
+    image: apache/airflow:3.0.2-python3.12
     container_name: document_flow
     restart: always
     ports:
@@ -13,4 +12,4 @@ services:
       - ./scripts:/opt/airflow/scripts
       - ./db:/opt/airflow/db
       - ./data:/opt/airflow/data
-    command: webserver
+    command: airflow api-server
