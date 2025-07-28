@@ -3,4 +3,10 @@ pdfminer.six
 spacy
 scikit-learn
 sqlite-utils
-
+psycopg2-binary
+watchdog
+textdistance
+pandas
+numpy
+opencv-python
+PyMuPDF
